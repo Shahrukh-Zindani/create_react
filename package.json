@@ -3,11 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.8.1",
+    "eslint-config-react-app": "^0.2.1",
+    "eslint-plugin-flowtype": "^2.18.1",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.4.1",
     "react-scripts": "0.6.1"
   },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

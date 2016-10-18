@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import cn from 'classnames'
+
+import logo from './logo.svg'
+import './App.css'
 
 class App extends Component {
+  // static propTypes = {}
+  // static defaultProps = {}
+  // state = {}
+
   render() {
+    const { className, ...props } = this.props
     return (
-      <div className="App">
+      <div className={cn('App', className)} { ...props }>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
@@ -14,8 +21,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
