@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 
-import style from './About.css'
+// import style from './About.css'
 
 const About = ({ className, ...props }) => (
   <div className={cn('App', className)} { ...props }>
