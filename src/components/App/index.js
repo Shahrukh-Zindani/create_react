@@ -27,11 +27,14 @@ class App extends Component {
   static defaultProps = {}
   state = {
     list: [],
+    // finished: [],
+    // unFinished: []
   }
-  click = (e) => {
+  addItem = (e) => {
     const listItem = this.input.state.value
-    const listOfTodos = this.state.list
+    const { list: listOfTodos } = this.state
     listOfTodos.push(listItem)
+
     this.setState({ list: listOfTodos })
   }
   onListClick = (index) => {
@@ -41,17 +44,17 @@ class App extends Component {
     this.setState({ list: listOfTodos })
   }
   render() {
-    const { className, ...props } = this.props
+    const { className } = this.props
     const { list } = this.state
     return (
-      <div className={cn('App', className)} { ...props }>
+      <div className={cn('App', className)}>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
         <ul className="List">
           <InputField ref={(node) => this.input = node}/>
-          <Button onClick={this.click} />
+          <Button onClick={this.addItem} />
         </ul>
         <ToDoList className="todo" list={list} onListClick={this.onListClick}/>
       </div>
