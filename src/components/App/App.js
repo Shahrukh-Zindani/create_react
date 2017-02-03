@@ -11,7 +11,7 @@ import './App.css'
 const ToDoList = ({ list, onListClick, className }) => (
   <div className={cn('App', className)}>
     <ul>
-      { list.map((item, index) => (
+      {list.map((item, index) => (
         <li key={index}>
           <CheckBox value={item} label={item} name={item} onClick={() => onListClick(index)}/>
           {item}
@@ -30,18 +30,35 @@ class App extends Component {
     // finished: [],
     // unFinished: []
   }
+  constructor(props) {
+    super(props)
+    this.init()
+  }
+
+  init = () => {
+    this.setState({
+      textValue: '',
+      list: []
+    })
+  }
   addItem = (e) => {
-    const listItem = this.input.state.value
-    const { list: listOfTodos } = this.state
+    const { textValue: listItem, list: listOfTodos } = this.state
     listOfTodos.push(listItem)
 
-    this.setState({ list: listOfTodos })
+    this.setState({ list: listOfTodos, textValue: '' })
+    this.takeScreenshot()
+  }
+
+  takeScreenshot = () => {
   }
   onListClick = (index) => {
     const listOfTodos = this.state.list
     delete listOfTodos[index]
 
     this.setState({ list: listOfTodos })
+  }
+  onTextChange = (event) => {
+    this.setState({ textValue: event.target.value })
   }
   render() {
     const { className } = this.props
@@ -53,7 +70,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <ul className="List">
-          <InputField ref={(node) => this.input = node}/>
+          <InputField value={this.state.textValue} onChange={this.onTextChange}/>
           <Button onClick={this.addItem} />
         </ul>
         <ToDoList className="todo" list={list} onListClick={this.onListClick}/>
