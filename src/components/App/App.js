@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import cn from 'classnames'
 
 import logo from './logo.svg'
-import InputField from '../FormFields/InputField'
-import Button from '../FormFields/Button'
-import CheckBox from '../FormFields/CheckBox'
+import InputField from '../container/InputField'
+import Button from '../container/Button'
+import CheckBox from '../container/CheckBox'
 
 import './App.css'
 
@@ -23,21 +23,17 @@ const ToDoList = ({ list, onListClick, className }) => (
 
 
 class App extends Component {
-  static propTypes = {}
-  static defaultProps = {}
-  state = {
-    list: [],
-    // finished: [],
-    // unFinished: []
-  }
+  // static defaultProps = {}
   constructor(props) {
     super(props)
+    this.state = {
+      list: [],
+    }
     this.init()
   }
 
   init = () => {
     this.setState({
-      textValue: '',
       list: []
     })
   }
@@ -57,9 +53,6 @@ class App extends Component {
 
     this.setState({ list: listOfTodos })
   }
-  onTextChange = (event) => {
-    this.setState({ textValue: event.target.value })
-  }
   render() {
     const { className } = this.props
     const { list } = this.state
@@ -70,7 +63,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <ul className="List">
-          <InputField value={this.state.textValue} onChange={this.onTextChange}/>
+          <InputField ref={(elem) => { this.node = elem }}/>
           <Button onClick={this.addItem} />
         </ul>
         <ToDoList className="todo" list={list} onListClick={this.onListClick}/>
