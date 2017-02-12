@@ -1,5 +1,6 @@
 import React from 'react'
 import './Style.css'
+
 class CheckBox extends React.Component {
   render() {
     const { value, name, checked, onClick } = this.props
