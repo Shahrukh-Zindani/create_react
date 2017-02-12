@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import cn from 'classnames'
 
 import logo from './logo.svg'
-import InputField from '../container/InputField'
-import Button from '../container/Button'
-import CheckBox from '../container/CheckBox'
+import InputField from '../../container/InputField'
+import Button from '../../container/Button'
+import CheckBox from '../../container/CheckBox'
 
 import './App.css'
 
