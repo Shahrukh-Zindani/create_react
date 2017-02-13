@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import cn from 'classnames'
 
-import logo from './logo.svg'
 import InputField from '../../container/InputField'
 import Button from '../../container/Button'
 import CheckBox from '../../container/CheckBox'
@@ -23,7 +22,6 @@ const ToDoList = ({ list, onListClick, className }) => (
 
 
 class App extends Component {
-  // static defaultProps = {}
   constructor(props) {
     super(props)
     this.state = {
@@ -32,6 +30,9 @@ class App extends Component {
     this.init()
   }
 
+  componentDidMount() {
+    console.log('test')
+  }
   init = () => {
     this.setState({
       list: []
@@ -57,12 +58,8 @@ class App extends Component {
     const { className } = this.props
     const { list } = this.state
     return (
-      <div className={cn('App', className)}>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <ul className="List">
+      <div >
+        <ul className={cn('App', className)}>
           <InputField ref={(elem) => { this.node = elem }}/>
           <Button onClick={this.addItem} />
         </ul>

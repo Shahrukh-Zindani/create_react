@@ -9,7 +9,8 @@ module.exports = {
         }
     },
     "env": {
-        "es6": true
+        "es6": true,
+        "jasmine": true
     },
     "settings": {
         "import/resolver": {

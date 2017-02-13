@@ -1,24 +1,16 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { mount } from 'enzyme'
 import App from '../components/App/'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div')
-  ReactDOM.render(<App />, div)
-})
-
-const sum = (a, b) => a + b
-
-// test('sum', () => {
-//   expect(sum(1, 4)).toBe(5)
+// it('renders without crashing', () => {
+//   const div = document.createElement('div')
+//   ReactDOM.render(<App />, div)
 // })
 
-
-describe('add()',  () => {
-  it('adds two numbers', () => {
-    expect(sum(2, 1)).toEqual(3)
-  })
-  it('does not add the third number', () => {
-    expect(sum(2, 3, 5)).toEqual(sum(2, 3))
+describe('<App />', () => {
+  it('doesn\'t contains the welcome message', () => {
+    const wrapper = mount(<App />)
+    const welcome = <h2>Welcome to React</h2>
+    expect(wrapper.contains(welcome)).toEqual(false)
   })
 })
