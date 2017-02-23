@@ -21,7 +21,10 @@
     "pre-push": "^0.1.1",
     "react-addons-test-utils": "^15.4.2",
     "react-scripts": "0.6.1",
-    "react-test-renderer": "^15.4.2"
+    "react-test-renderer": "^15.4.2",
+    "redux-devtools": "^3.3.2",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.2.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,8 +40,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --watchAll",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "prepush-test": "CI=true npm test"
   },
-  "prepush": ["build", "test"]
+  "prepush": [
+    "prepush-test"
+  ]
 }
