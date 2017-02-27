@@ -1,10 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { browserHistory } from 'react-router'
 import { createStore, compose } from 'redux'
 import { Provider } from 'react-redux'
 
-import Routes from './config/routes'
+import routes from './config/routes'
 import reducer from './reducers'
 import './index.css'
 
@@ -15,7 +14,7 @@ const store = createStore(reducer, enhancer)
 
 render(
   <Provider store={store}>
-    <Routes history={browserHistory} />
+    {routes}
   </Provider>,
   document.getElementById('root')
 )

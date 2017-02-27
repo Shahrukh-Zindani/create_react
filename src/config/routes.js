@@ -1,12 +1,10 @@
 import React from 'react'
-import { Router, Route } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 
-import App from '../components/App'
+import AddToDo from '../components/containers/AddToDo'
 
-const Routes = (props) => (
-  <Router {...props}>
-    <Route path="/" component={App} />
+module.exports = (
+  <Router history={browserHistory}>
+    <Route path="/" component={AddToDo} />
   </Router>
 )
-
-export default Routes

@@ -1,16 +1,15 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import App from '../components/App/'
+import renderer from 'react-test-renderer'
+import AddToDo from '../components/containers/AddToDo'
 
 // it('renders without crashing', () => {
 //   const div = document.createElement('div')
 //   ReactDOM.render(<App />, div)
 // })
 
-describe('<App />', () => {
-  it('doesn\'t contains the welcome message', () => {
-    const wrapper = mount(<App />)
-    const welcome = <h2>Welcome to React</h2>
-    expect(wrapper.contains(welcome)).toEqual(false)
+describe('<AddToDo />', () => {
+  it('test', () => {
+    const tree = renderer.create(<AddToDo />).toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })
