@@ -10,5 +10,4 @@ const App = ({ className }) => (
   </div>
 )
 
-
 export default App

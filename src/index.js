@@ -7,8 +7,7 @@ import routes from './config/routes'
 import reducer from './reducers'
 import './index.css'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose // eslint-disable-line
-
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const enhancer = composeEnhancers()
 const store = createStore(reducer, enhancer)
 
