@@ -1,2 +1,3 @@
 _version=3.1.0
-repo=Shobhit1/https://github.com/Shobhit1/create_react.git
+repo=git@github.com:Shobhit1/create_react.git
+github.token=cc861da1940cfc4cee7cf529d28e2aeb1dcc891e
