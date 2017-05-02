@@ -12,7 +12,7 @@ let store
 let container
 let wrapper
 
-
+// TODO Fix the test case for App
 // testing the connected component
 beforeEach(() => {
   store = createStore(reducer)
