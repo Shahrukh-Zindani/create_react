@@ -1,0 +1,5 @@
+exports[`Input Field tests matches snapshot 1`] = `
+<input
+  onChange={[Function]}
+  value="" />
+`;
