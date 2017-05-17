@@ -1,7 +1,7 @@
 import React from 'react'
 
-const ButtonField = ({ children }) => (
-  <button>{children}</button>
+const ButtonField = (props) => (
+  <button>{props.children}</button>
 )
 
 export default ButtonField

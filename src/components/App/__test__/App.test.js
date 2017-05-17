@@ -2,9 +2,9 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import reducer from '../../reducers'
-import AddToDo, { AddToDoView } from '../containers/AddToDo/AddToDo'
-import App from './App'
+import reducer from '../../../reducers'
+import AddToDo, { AddToDoView } from '../../containers/AddToDo/AddToDo'
+import App from '../App'
 
 
 // const mockStore = configureStore()
