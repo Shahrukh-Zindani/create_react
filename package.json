@@ -9,7 +9,8 @@
     "eslint-config-airbnb-easy": "^1.0.5",
     "eslint-watch": "^2.1.14",
     "pre-push": "^0.1.1",
-    "react-scripts": "1.0.0"
+    "react-scripts": "1.0.0",
+    "react-test-renderer": "^15.5.4"
   },
   "eslintConfig": {
     "extends": "react-app"
