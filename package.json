@@ -6,7 +6,7 @@
     "babel-eslint": "^7.1.1",
     "babel-preset-stage-0": "^6.22.0",
     "enzyme": "^2.7.0",
-    "eslint-config-airbnb-easy": "^1.0.5",
+    "eslint-config-airbnb-easy": "1.0.6",
     "eslint-watch": "^2.1.14",
     "pre-push": "^0.1.1",
     "react-scripts": "1.0.0",
