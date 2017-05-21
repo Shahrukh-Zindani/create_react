@@ -1,5 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Input Field tests matches snapshot 1`] = `
 <input
   onChange={[Function]}
-  value="" />
+  value=""
+/>
 `;

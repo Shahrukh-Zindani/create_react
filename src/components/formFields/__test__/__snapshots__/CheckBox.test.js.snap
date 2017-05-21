@@ -1,8 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Input Field tests matches snapshot 1`] = `
 <input
   checked={undefined}
   name={undefined}
   onClick={undefined}
   type="checkbox"
-  value={undefined} />
+  value={undefined}
+/>
 `;
