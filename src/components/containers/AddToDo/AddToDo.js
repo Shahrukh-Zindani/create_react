@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Button from '../../formFields/Button'
 import { addTodo } from '../../../actions/todoActions'
 
-export const AddToDoView = ({ addToDoFromProps }) => {
+export const AddToDoView = ({ addTodo: addToDoFromProps }) => {
   let input
   return (
     <div>
@@ -17,7 +17,11 @@ export const AddToDoView = ({ addToDoFromProps }) => {
           input.value = ''
         }}
       >
-        <input ref={(node) => { input = node }} />
+        <input
+          ref={(node) => {
+            input = node
+          }}
+        />
         <Button type="submit">
           Add Todo
         </Button>
@@ -26,11 +30,7 @@ export const AddToDoView = ({ addToDoFromProps }) => {
   )
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  addToDoFromProps: (value) => {
-    dispatch(addTodo(value))
-  }
-})
+const mapDispatchToProps = { addTodo }
 
 const AddToDo = connect(null, mapDispatchToProps)(AddToDoView)
 export default AddToDo
