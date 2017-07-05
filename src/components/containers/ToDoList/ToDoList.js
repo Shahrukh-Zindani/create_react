@@ -20,6 +20,6 @@ const ToDoList = ({ list, className }) => (
   </div>
 )
 
-const mapStateToProps = ({ todos }) => ({ list: todos.list })
+const mapStateToProps = ({ todos }) => ({ list: todos.get('list') })
 
 export default connect(mapStateToProps, null)(ToDoList)
