@@ -1,7 +1,8 @@
 import React from 'react'
 import DatePicker from 'react-datepicker'
-import moment from 'moment'
-import './DatePicker.css'
+import 'react-datepicker/dist/react-datepicker.css';
+import moment from 'moment';  
+import './DatePicker.css';
 
 class Example extends React.Component {
   constructor(props) {
@@ -20,7 +21,9 @@ class Example extends React.Component {
 
   render() {
     return (
+      <div className = 'wrapper-datepicker'>
       <DatePicker
+        {...this.props}
         selected={this.state.startDate}
         onChange={this.handleChange}
         peekNextMonth={false}
@@ -29,6 +32,7 @@ class Example extends React.Component {
         disabled={false}
         excludeDates={[moment(), moment().subtract(1, 'days')]}
       />
+      </div>
     )
   }
 }
